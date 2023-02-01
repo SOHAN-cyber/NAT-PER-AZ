@@ -1,0 +1,32 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Effect": "Allow",
+        "Principal": {
+          "AWS": "arn:aws:iam::395698474264:user/Sandeep_Rawat"
+        },
+        "Action": "s3:PutObject",
+        "Resource": "arn:aws:s3:::bp-infra/access/AWSLogs/395698474264/*"
+      }
+    ]
+  }
+
+{
+"Id": "Policy",
+"Version": "2012-10-17",
+"Statement": [
+    {
+    "Action": [
+        "s3:PutObject"
+    ],
+    "Effect": "Allow",
+    "Resource": "arn:aws:s3:::bp-infra/*",
+    "Principal": {
+        "AWS": [
+        "${data.aws_elb_service_account.main.arn}"
+        ]
+    }
+    }
+]
+}

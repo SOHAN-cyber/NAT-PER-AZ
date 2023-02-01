@@ -1,0 +1,17 @@
+.
+erraform
+.tfstate
+# Local .terraform directories
+**/.terraform/*
+.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfvars
+.terraform/*
+# .tfstate files
+*.tfstate
+*.tfstate.*
+crash.log
+.terraformrc
+terraform.rc
+.terraform.lock.hcl
